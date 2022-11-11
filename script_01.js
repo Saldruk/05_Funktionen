@@ -23,7 +23,7 @@ function test()
 function ausgabeNamen() {
     let firstname = "Meik";
     console.log("Hallo "+ firstname + " !");
-    }
+}
 
     /************ Funktionen 02b  **********/
     // 2b. Parametisierung + Datenübergabe von AUSSEN
@@ -34,25 +34,25 @@ function ausgabeNamen() {
     function ausgabeNamenParam(firstname)
     {
         console.log("Hallo "+ firstname + " !");
-    }
+}
 
     /******** Funktionen 02c  **********/
     // 2c Mehrere Parameter
 
-    ausgabeNamenParams("Meik","Huber"); // Argumente
-    ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?")); //Argumente
+    // ausgabeNamenParams("Meik","Huber"); // Argumente
+    //ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?")); //Argumente
 
     function ausgabeNamenParams(firstName,familyName) // Parameter
     {
         console.log("hallo "+firstName + " "+familyName + " !");
-    }
+}
 
     /********* Funktionen 03a **********/
     //03a. Vorbereitung
     // Postulat: one function = one job (uncle Bob)
     // SRP single responsibility
 
-    ausgabeNamenParams2("Meik","Huber"); // Argumente
+    // ausgabeNamenParams2("Meik","Huber"); // Argumente
 
 
     function ausgabeNamenParams2(firstName,familyName) //Parameter
@@ -63,5 +63,21 @@ function ausgabeNamen() {
 
         //2. Funktionalität: string output
        console.log(outputStr);
-    }
+}
 
+    /*********** Funktionen 3b **********/
+    // Trennen der Funktionalität | return
+
+// 1. Funktionalität: string composing
+    output(getstring("Meik","Huber"));
+    function getstring(firstName,familyName){
+    const gap= " ";
+    const outputStr = "Hallo "+firstName + gap + familyName + " !";
+    return outputStr;
+}
+
+    //2. Funktionalität: string out
+    // output("hi");
+    function output(outputdata){
+        console.log(outputdata);
+}
