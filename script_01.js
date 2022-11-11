@@ -28,8 +28,10 @@ function ausgabeNamen() {
     /************ Funktionen 02b  **********/
     // 2b. Parametisierung + Datenübergabe von AUSSEN
 
-    ausgabeNamenParam();
+    ausgabeNamenParam(prompt("Geben sie einen Namen ein: ")); //Argument
+    // Argumente sind Daten für Parameter
 
-    function ausgabeNamenParam(firstname){
+    function ausgabeNamenParam(firstname)
+    {
         console.log("Hallo "+ firstname + " !");
     }
